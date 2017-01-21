@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>�X�A</title>
+  <title>Code Farmer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="�X�A">
+<meta property="og:title" content="Code Farmer">
 <meta property="og:url" content="https://hentaishojo.github.io/index.html">
-<meta property="og:site_name" content="�X�A">
+<meta property="og:site_name" content="Code Farmer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="�X�A">
+<meta name="twitter:title" content="Code Farmer">
   
-    <link rel="alternate" href="/atom.xml" title="�X�A" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Code Farmer" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">�X�A</a>
+        <a href="/" id="logo">Code Farmer</a>
       </h1>
       
     </div>
@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hentaishojo.github.io"></form>
@@ -84,10 +84,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本來創立部落格後第一篇應是要打Hello world或是個人遠景之類的無意義文的，但實際研究並實作後發現架部落格流程對Windows用習慣的人真不友善，網路上的資料也是東缺西缺，看了好幾篇才看懂要怎麼做，只好先寫一篇教學了，無意義文改天再補上！</p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>本教學適用於Windows系統下，使用Hexo部落格編輯器製作部落格</p>
-<h3 id="簡易概念圖"><a href="#簡易概念圖" class="headerlink" title="簡易概念圖"></a>簡易概念圖</h3>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h3 id="簡易概念圖"><a href="#簡易概念圖" class="headerlink" title="簡易概念圖"></a>簡易概念圖</h3>
 <p>其中Node.js是Hexo使用的執行環境，SourceTree是Windows端Github管理程式，這兩個是可替換的，在本教學中用這套配置作為範例。<br>由於GitHub只支援靜態網站，所以才有下面那麼多麻煩步驟。</p>
-<h3 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h3><p>##下載以下資源並安裝<br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js (最後穩定版,LTS)</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a><br><a href="https://desktop.github.com/" target="_blank" rel="external">GitHub</a></p>
+<h3 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h3><p>#下載以下資源並安裝<br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js (最後穩定版,LTS)</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a><br><a href="https://desktop.github.com/" target="_blank" rel="external">GitHub</a></p>
 <p>##設定Node.js環境變數<br>在”我的電腦”上點右鍵<br>點”內容”，進入”系統”頁面<br>點”進階系統設定”，進入”系統內容”頁面<br>點”環境變數”，進入”環境變數”頁面<br>在你的”OOO的使用者變數”中選到”PATH”<br>點”編輯”，進入”編輯環境變數”頁面<br>點”新增”<br>輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
 <p>(分號是為了隔開各個變數)<br>確認(還要我教?)</p>
 <p>##初始化SourceTree<br>開啟SourceTree並辦帳號<br>放著吧，很後面才會用到</p>
@@ -96,7 +95,7 @@
 <p>(如果還是無法運作，代表你沒緣分)<br>等git shell刷累了停止刷出天書後就可以執行下一步了</p>
 <p>接下來的步驟你可能會看到<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm WARN SKIPPING OPTIONAL DEPENDENCY: XXXX</div></pre></td></tr></table></figure></p>
 <p>就當作沒看到吧</p>
-<h3 id="使用Hexo產生動態部落格"><a href="#使用Hexo產生動態部落格" class="headerlink" title="使用Hexo產生動態部落格"></a>使用Hexo產生動態部落格</h3><p>##建立網站基礎資料<br>開啟”Git Shell”<br>輸入 (建議你先想好一個永久存放整個網站的地方，亂動資料夾可能會弄壞它)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> D:\你的超猛資料夾\隨你高興\Hexo</div></pre></td></tr></table></figure></p>
+<h3 id="使用Hexo產生動態部落格"><a href="#使用Hexo產生動態部落格" class="headerlink" title="使用Hexo產生動態部落格"></a>使用Hexo產生動態部落格</h3><p>#建立網站基礎資料<br>開啟”Git Shell”<br>輸入 (建議你先想好一個永久存放整個網站的地方，亂動資料夾可能會弄壞它)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> D:\你的超猛資料夾\隨你高興\Hexo</div></pre></td></tr></table></figure></p>
 <p>(以後每次開啟Git Shell，你都要打這行到資料夾，才能操作其他指令)</p>
 <p>輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">hexo init</div></pre></td></tr></table></figure></p>
 <p>天書停止後，從”我的電腦”去”D:\你的超猛資料夾\隨你高興\Hexo”看看有沒有以下東西，沒有就是沒緣分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">檔案：</div><div class="line">_config.yml &lt;--(記好名字，之後的步驟會用到)</div><div class="line">package.json</div><div class="line">資料夾：</div><div class="line">scaffolds</div><div class="line">scripts</div><div class="line"><span class="built_in">source</span></div><div class="line">themes</div></pre></td></tr></table></figure></p>
@@ -104,7 +103,7 @@
 <h3 id="安裝簡單插件"><a href="#安裝簡單插件" class="headerlink" title="安裝簡單插件"></a>安裝簡單插件</h3><p>輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-index --save</div><div class="line">npm install hexo-generator-archive --save</div><div class="line">npm install hexo-generator-category --save</div><div class="line">npm install hexo-generator-tag --save</div><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">npm install hexo-deployer-heroku --save</div><div class="line">npm install hexo-deployer-rsync --save</div><div class="line">npm install hexo-deployer-openshift --save</div><div class="line">npm install hexo-renderer-marked@0.2 --save</div><div class="line">npm install hexo-renderer-stylus@0.2 --save</div><div class="line">npm install hexo-generator-feed@1 --save</div><div class="line">npm install hexo-generator-sitemap@1 --save</div></pre></td></tr></table></figure></p>
 <h3 id="檢查一下"><a href="#檢查一下" class="headerlink" title="檢查一下"></a>檢查一下</h3><p>到這裡，動態部落格已經完成，若你想檢查一下，輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
 <p>即可開啟本機伺服器<br>打開瀏覽器在網址貼上”localhost:4000”就可以看到部落格了，沒有就是沒緣分</p>
-<p>##產生靜態部落格並上傳</p>
+<p>#產生靜態部落格並上傳</p>
 <p>###設定GitHub<br>上GitHub，在你的帳號內建立一個倉庫(Repository)，倉庫的名字必須是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">你的帳號.github.io</div></pre></td></tr></table></figure></p>
 <p>大小寫都要一樣，不然等一下很容易沒緣分</p>
 <p>###設定SourceTree<br>開啟SourceTree，辦好帳號並登入後，你會有一片空白<br>點選左上角”Clone/New”<br>在”Source Path / URL” 輸入你的倉庫網址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://github.com/你的帳號/你的帳號.github.io</div></pre></td></tr></table></figure></p>
@@ -122,7 +121,7 @@
 <p>看一下是不是有產生一堆檔案，沒有就是沒緣分</p>
 <p>###上傳<br>開啟SourceTree，點選左上角”Commit”<br>你會看到”Unstaged”有一堆檔案等著同步<br>點選”Stage All”<br>勾選左下角”Push changes immediately to origin/master”<br>點選右下角”Commit”<br>(說明欄打不打都可以)<br>點選左上角”Push”即可完成上傳<br>上傳成功後，上網檢查看看有沒有”HelloWorld”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://你的帳號.github.io/</div></pre></td></tr></table></figure></p>
 <p>這個就是你的永久部落格網址</p>
-<p>##維護</p>
+<p>#維護</p>
 <p>###發一篇文<br>開啟”我的電腦”到<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">F:\code\C<span class="comment">#\_hexo\source\_posts</span></div></pre></td></tr></table></figure></p>
 <p>你會看到”hello-world.md”，這是動態版的文章，<br>複製一個並改成你要的文章內容，語法部分網路上有很多教學<br>檔名不會顯示在網頁上，自己方便管理就好，盡量英文檔名<br>(任何打繁中字的文件，存檔時記得存成UTF-8格式)</p>
 <p>打完後<br>開啟”Git Shell”，到Hexo<br>輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure></p>
@@ -132,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hentaishojo.github.io/2017/01/21/1/" data-id="ciy6oirig0000sgts4suekghu" class="article-share-link">Partager</a>
+      <a data-url="https://hentaishojo.github.io/2017/01/21/1/" data-id="ciy6oirig0000sgts4suekghu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +156,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
     </div>
@@ -167,7 +166,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         
@@ -188,7 +187,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Me<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
