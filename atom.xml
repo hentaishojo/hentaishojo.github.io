@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hentaishojo.github.io/"/>
-  <updated>2017-01-21T03:52:06.017Z</updated>
+  <updated>2017-01-21T03:55:30.073Z</updated>
   <id>https://hentaishojo.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://hentaishojo.github.io/2017/01/21/1/"/>
     <id>https://hentaishojo.github.io/2017/01/21/1/</id>
     <published>2017-01-21T00:29:45.812Z</published>
-    <updated>2017-01-21T03:52:06.017Z</updated>
+    <updated>2017-01-21T03:55:30.073Z</updated>
     
     <content type="html"><![CDATA[<p>本來創立部落格後第一篇應是要打Hello world或是個人遠景之類的無意義文的，但實際研究並實作後發現架部落格流程對Windows用習慣的人真不友善，網路上的資料也是東缺西缺，看了好幾篇才看懂要怎麼做，只好先寫一篇教學了，無意義文改天再補上！</p>
-<h1 id="簡易概念圖"><a href="#簡易概念圖" class="headerlink" title="簡易概念圖"></a>簡易概念圖</h1><p><img src="\pic\1-1.png" alt="img caption"></p>
+<h1 id="簡易概念圖"><a href="#簡易概念圖" class="headerlink" title="簡易概念圖"></a>簡易概念圖</h1><p><img src="\pic\1-1.png" alt="概念圖"></p>
 <p>其中Node.js是Hexo使用的執行環境，SourceTree是Windows端Github管理程式，這兩個是可替換的，在本教學中用這套配置作為範例。<br>由於GitHub只支援靜態網站，所以才有下面那麼多麻煩步驟。</p>
 <h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><h3 id="下載以下資源並安裝"><a href="#下載以下資源並安裝" class="headerlink" title="下載以下資源並安裝"></a>下載以下資源並安裝</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js (最後穩定版,LTS)</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a><br><a href="https://desktop.github.com/" target="_blank" rel="external">GitHub</a></p>
 <h2 id="設定Node-js環境變數"><a href="#設定Node-js環境變數" class="headerlink" title="設定Node.js環境變數"></a>設定Node.js環境變數</h2><p>在”我的電腦”上點右鍵<br>點”內容”，進入”系統”頁面<br>點”進階系統設定”，進入”系統內容”頁面<br>點”環境變數”，進入”環境變數”頁面<br>在你的”OOO的使用者變數”中選到”PATH”<br>點”編輯”，進入”編輯環境變數”頁面<br>點”新增”<br>輸入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\nodejs\node_modules\npm</div></pre></td></tr></table></figure></p>
